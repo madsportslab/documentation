@@ -2,7 +2,7 @@
 All documentation for madsportslab
 
 
-# How To Install golang on Ubuntu 16.04 server
+# How To Install golang on Ubuntu 16.04 Server
 
 1. Navigate to $HOME directory, and download latest stable golang install package (current version is go.1.7):
 
@@ -52,4 +52,47 @@ All documentation for madsportslab
    ```
    $ source ~/.profile
    ```
+
+6. Verify the installation
+
+   the following steps will verify correct installation of golang 
    
+   ```
+   $ mkdir $HOME/work
+   $ mkdir -p work/src/github.com/_userid_/hello
+   $ nano ~/work/src/github.com/_userid_/hello/hello.go
+   ```
+   
+   create a simple "hello" function
+   
+   ```
+   package main 
+   
+   import "fmt"
+   
+   func main () {
+   
+      fmt.Printf ("hello, world/n")
+   }
+   ```
+   
+   compile the newly created "hello.go" with the following command: 
+   
+   ```
+   $ go install github.com/_userid_/hello
+   ```
+   
+   after correctly compile the file, run it with the following command: 
+   
+   ```
+   $ hello
+   ```
+   
+   output should be: 
+   
+   ```
+   hello, world
+   '''
+   
+   
+
