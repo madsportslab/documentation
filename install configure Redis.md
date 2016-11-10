@@ -69,7 +69,8 @@
   find ```supervised``` directive, default is set to ```no```, change it to ```systemd```:
   
   ```
-                            /etc/redis/redis.conf
+  <div>
+                         /etc/redis/redis.conf
   ...                          
   # If you run Redis from upstart or systemd, Redis can interact with your
   # supervision tree. Options:
@@ -82,4 +83,5 @@
   #       They do not enable continuous liveness pings back to your supervisor.
   supervised systemd
   ...
+  </div>
   ```
