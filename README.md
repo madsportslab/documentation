@@ -59,8 +59,8 @@ All documentation for madsportslab
    
    ```
    $ mkdir $HOME/work
-   $ mkdir -p work/src/github.com/_userid_/hello
-   $ nano ~/work/src/github.com/_userid_/hello/hello.go
+   $ mkdir -p work/src/github.com/<userid>/hello
+   $ nano ~/work/src/github.com/<userid>/hello/hello.go
    ```
    
    create a simple "hello" function
@@ -79,7 +79,7 @@ All documentation for madsportslab
    compile the newly created "hello.go" with the following command: 
    
    ```
-   $ go install github.com/_userid_/hello
+   $ go install github.com/<userid>/hello
    ```
    
    after correctly compile the file, run it with the following command: 
@@ -88,11 +88,11 @@ All documentation for madsportslab
    $ hello
    ```
    
-   output should be: 
+   if golang has been correctly installed, output should be: 
    
    ```
    hello, world
-   '''
+   ```
    
    
 
