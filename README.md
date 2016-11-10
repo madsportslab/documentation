@@ -23,8 +23,17 @@ All documentation for madsportslab
      702ad90f705365227e902b42d91dd1a40e48ca7f67a2fd052aaa4295cd95 go.1.7.linux-amd64.tar.gz
    ```
  
-3. use ```tar``` to extract the tarball.  ```x``` flag tells ```tar``` to extract, ```v``` enables verbose output, and ```f``` specifies a filename:
+3. Use ```tar``` to extract the tarball.  ```x``` flag tells ```tar``` to extract, ```v``` enables verbose output, and ```f``` specifies a filename:
 
    ```
    $ tar xvf go1.7.linux-amd64.tar.gz
    ```
+   
+4. There should have a ```go``` directory in the home directory.  Recursively change ```go```'s owner and group to ***root***, and move it to ```/usr/local```:
+   
+   ```
+   $ sudo chown -R root:root ./go
+   $ sudo mv go /usr/go
+   ```
+  
+5. 
