@@ -68,10 +68,11 @@
   
   find ```supervised``` directive, default is set to ```no```, change it to ```systemd```:
   
+  
   ```
-  <div>
+  <div>
                          /etc/redis/redis.conf
-  ...                          
+                           
   
   # If you run Redis from upstart or systemd, Redis can interact with your
   
@@ -93,6 +94,5 @@
   
   supervised systemd
   
-  ...
   </div>
   ```
