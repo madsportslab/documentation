@@ -136,5 +136,62 @@
   ```
   Save and close the file
   
+13. Create user, group and directory referenced previously:
+
+  ```
+  $ sudo adduser --system --group --no-create-home redis
+  $ sudo mkdir /var/lib/redis
+  ```
   
+  assign ```redis``` user and group ownership to the directory, and change permission so regular users cannot access this directory
+  
+  ```
+  $ sudo chown redis:redis /var/lib/redis
+  $ sudo chmod 770 /var/lib/redis
+  ```
+  
+14.  start up the systemd service, and check service status is running with no error:
+
+  ```
+  $ sudo systemctl start redis
+  $ sudo systemctl status redis
+  ```
+  
+  should have the output look like the following:
+  
+  ```
+  ● redis.service - Redis Server
+   Loaded: loaded (/etc/systemd/system/redis.service; enabled; vendor preset: enabled)
+   Active: active (running) since Wed 2016-05-11 14:38:08 EDT; 1min 43s ago
+  Process: 3115 ExecStop=/usr/local/bin/redis-cli shutdown (code=exited, status=0/SUCCESS)
+ Main PID: 3124 (redis-server)
+    Tasks: 3 (limit: 512)
+   Memory: 864.0K
+      CPU: 179ms
+   CGroup: /system.slice/redis.service
+           └─3124 /usr/local/bin/redis-server 127.0.0.1:6379
+  ```
+
+15. Test Redis instance functionality
+
+  ```
+  $ redis-cli
+  127.0.0.1:6379> ping
+  PONG
+  ```
+  
+16. Verify able to set keys:
+
+  ```
+  127.0.0.1:6379> set test "it is working!"
+  OK
+  127.0.0.1:6379> get test
+  "it is working!"
+  127.0.0.1:6379> exit
+  ```
+  
+  
+  
+  
+
   
