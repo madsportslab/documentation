@@ -36,4 +36,20 @@ All documentation for madsportslab
    $ sudo mv go /usr/go
    ```
   
-5. 
+5. Set go path
+
+   ```
+   $ sudo nano ~/.profile
+   ```
+   at the end of the file add the following lines:
+   
+   ```
+   export GOPATH=$HOME/work
+   export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
+   ```
+   Save and close the file, and refresh the file by running:
+   
+   ```
+   $ source ~/.profile
+   ```
+   
