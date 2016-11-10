@@ -2,7 +2,7 @@
 All documentation for madsportslab
 
 
-# How To Install golang on Ubuntu 16.04 Server
+# How To Install and Configure golang on Ubuntu 16.04 Server
 
 1. Navigate to $HOME directory, and download latest stable golang install package (current version is go.1.7):
 
