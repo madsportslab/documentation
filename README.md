@@ -18,9 +18,13 @@ All documentation for madsportslab
    ```
    sample output 
    
-   '''
+   ```
    $ sha256sum go1.7.linux-amd64.tar.gz
      702ad90f705365227e902b42d91dd1a40e48ca7f67a2fd052aaa4295cd95 go.1.7.linux-amd64.tar.gz
    ```
  
-3. 
+3. use ```tar``` to extract the tarball.  ```x``` flag tells ```tar``` to extract, ```v``` enables verbose output, and ```f``` specifies a filename:
+
+   ```
+   $ tar xvf go1.7.linux-amd64.tar.gz
+   ```
