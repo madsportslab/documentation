@@ -190,6 +190,12 @@
   127.0.0.1:6379> exit
   ```
   
+17. Enable Redis start at boot
+
+  ```
+  $ sudo systemctl enable redis
+  Created symlink from /etc/systemd/system/multi-user.target.wants/redis.service to /etc/systemd/system/redis.service
+  ```
   
   
   
