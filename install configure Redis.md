@@ -29,6 +29,7 @@
 
   ```
   $ cd redis-stable
+  ```
   
 6. Compile Redis binaries
 
