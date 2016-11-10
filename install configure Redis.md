@@ -86,3 +86,23 @@
   supervised systemd
   ...
   ```
+  
+  find ```dir``` directroy, this specifies the directory where Redis will use to dump persistent data. use ```/var/lib/redis``` directory, which we will create later. 
+  
+    ```
+                      /etc/redis/redis.conf
+  . . .
+
+  # The working directory.
+  #
+  # The DB will be written inside this directory, with the filename specified
+  # above using the 'dbfilename' configuration directive.
+  #
+  # The Append Only File will also be created inside this directory.
+  #
+  # Note that you must specify a directory here, not a file name.
+  dir /var/lib/redis
+  
+  ...
+  ```
+  
