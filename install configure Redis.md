@@ -74,6 +74,7 @@
                          /etc/redis/redis.conf
                            
   ...
+  
   # If you run Redis from upstart or systemd, Redis can interact with your
   # supervision tree. Options:  
   #   supervised no      - no supervision interaction 
@@ -84,6 +85,7 @@
   #   Note: these supervision methods only signal "process is ready."
   #   They do not enable continuous liveness pings back to your supervisor.
   supervised systemd
+  
   ...
   ```
   
@@ -91,7 +93,8 @@
   
     ```
                       /etc/redis/redis.conf
-  . . .
+                      
+  ...
 
   # The working directory.
   #
@@ -105,4 +108,33 @@
   
   ...
   ```
+  
+12. create a systemd unit file , create and open the ```/etc/systemd/system/redis.service``` file:
+
+  ```
+  $ sudo nano /etc/systemd/system/redis.service
+  ```
+  
+  edit the file: 
+  
+  ```
+                    /etc/systemd/system/redis.service
+  
+  [Unit]
+  Description=Redis In-Memory Data Store
+  After=network.target
+  
+  [Service]
+  User=redis
+  Group=redis
+  ExecStart=/usr/local/bin/redis-server /etc/redis/redis.conf
+  ExecStop=/usr/local/bin/redis-cli shutdown
+  Restart=always
+  
+  [Install]
+  WantedBy=multi-user.target
+  ```
+  Save and close the file
+  
+  
   
