@@ -78,9 +78,9 @@
   #   supervised upstart - signal upstart by putting Redis into SIGSTOP mode
   #   supervised systemd - signal systemd by writing READY=1 to $NOTIFY_SOCKET
   #   supervised auto    - detect upstart or systemd method based on
-  #                        UPSTART_JOB or NOTIFY_SOCKET environment variables
-  # Note: these supervision methods only signal "process is ready."
-  #       They do not enable continuous liveness pings back to your supervisor.
+  #   UPSTART_JOB or NOTIFY_SOCKET environment variables
+  #   Note: these supervision methods only signal "process is ready."
+  #   They do not enable continuous liveness pings back to your supervisor.
   supervised systemd
   ...
   </div>
