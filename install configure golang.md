@@ -1,6 +1,6 @@
 # How To Install and Configure golang on Ubuntu 16.04 Server
 
-1. Navigate to $HOME directory, and download latest stable golang install package (current version is go.1.7.3, check 'https://golang.org/dl' for latest stable version):
+1. Navigate to $HOME directory, and download latest stable golang install package (current version is go.1.7.3, check `https://golang.org/dl` for latest stable version):
 
    ```
    $ cd ~
@@ -15,14 +15,14 @@
    sample output 
    
    ``
-   $ sha256sum go1.7.linux-amd64.tar.gz
-     702ad90f705365227e902b42d91dd1a40e48ca7f67a2fd052aaa4295cd95 go.1.7.linux-amd64.tar.gz
+   $ sha256sum go1.7.3,linux-amd64.tar.gz
+     508028aac0654e993564b6e2014bf2d4a9751e3b286661b0b0040046cf18028e go.1.7.3.linux-amd64.tar.gz
    ```
  
 3. Use ```tar``` to extract the tarball.  ```x``` flag tells ```tar``` to extract, ```v``` enables verbose output, and ```f``` specifies a filename:
 
    ```
-   $ tar xvf go1.7.linux-amd64.tar.gz
+   $ tar xvf go1.7.3.linux-amd64.tar.gz
    ```
    
 4. There should have a ```go``` directory in the home directory.  Recursively change ```go```'s owner and group to ***root***, and move it to ```/usr/local```:
